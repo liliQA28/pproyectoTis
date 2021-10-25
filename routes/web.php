@@ -26,7 +26,7 @@ Route::get('/empresa/create',[EmpresaController::class, 'create']);*/
 
 Route::resource('/empresa', EmpresaController::class)->middleware('auth');
 
-Auth::routes(['register'=>false, 'reset'=>false]);
+Auth::routes(['register'=>true, 'reset'=>true]);
 
 Route::get('/home', [EmpresaController::class, 'index'])->name('home');
 
